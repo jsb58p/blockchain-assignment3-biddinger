@@ -4,7 +4,7 @@
 
 ## Token Deployment Details
 
-- **TOKEN_ADDRESS:** `x2e983a1ba5e8b38aaaec4b440b9ddcfbf72e15d1`
+- **TOKEN_ADDRESS:** `0x2e983a1ba5e8b38aaaec4b440b9ddcfbf72e15d1`
 - **Deploy Block Number:** `2n`
 - **Roles & Cap:**
   - Roles assigned on deploy:
