@@ -4,21 +4,19 @@
 
 ## Token Deployment Details
 
-- **TOKEN_ADDRESS:** `0xYourTokenAddressHere`
-- **Deploy Block Number:** `YourDeployBlockNumberHere`
+- **TOKEN_ADDRESS:** `x2e983a1ba5e8b38aaaec4b440b9ddcfbf72e15d1`
+- **Deploy Block Number:** `2n`
 - **Roles & Cap:**
   - Roles assigned on deploy:
-    - `DEFAULT_ADMIN_ROLE`: Deployer address
-    - `MINTER_ROLE`: Deployer address
-    - `PAUSER_ROLE`: Deployer address
-  - Cap: `YourCapHere` tokens (with 18 decimals)
-  - Initial Mint: `YourInitialMintHere` tokens
+    - `DEFAULT_ADMIN_ROLE`: 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
+    - `MINTER_ROLE`: 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
+    - `PAUSER_ROLE`: 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
+  - Cap: `2000000` tokens
+  - Initial Mint: `1000000` tokens
 
 ---
 
 ## MetaMask Custom Network & Token Screenshot
-
-*Below is a placeholder for your MetaMask screenshot showing your custom network and token balance.*
 
 ![MetaMask Custom Network and Token](https://github.com/jsb58p/blockchain-assignment3-biddinger/blob/main/screenshots/screenshot4(CAMP%20pretransfer).png)
 
