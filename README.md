@@ -32,21 +32,26 @@ Block: 2n
 Add this to .env:
 TOKEN_ADDRESS=${rcpt.contractAddress}
 
-###Transfer+Approve
-efore | Me: 1000000 CAMP | You: 1000000 CAMP
+### Transfer+Approve
+
+bash```
+Before | Me: 1000000 CAMP | You: 1000000 CAMP
 transfer tx: 0x79c69bec6c151d3616137b17a7b7392e719b0d7d3f5d
 50e82c6b9767da15b91c gasUsed: 29223
 approve tx: 0x464f6035ff2f2167236b9632c6ff17f06d18253bdbacd
 3cb662e105cfe408899 gasUsed: 46408
 allowance: 50 CAMP
-After | Me: 1000000 CAMP | You: 1000000 CAMP
 
-###Airdrop
+After | Me: 1000000 CAMP | You: 1000000 CAMP
+```
+### Airdrop
+bash```
 Airdrop: 0x74de2b054e02c1291d69bc53344528e9299a2e0bfd764ebaff677711310c064 gasUsed: 40783 fee(wei): 95982417294767
 Singles total gasUsed: 29211 fee(wei): 67460602866930
 Batch saved ≈ -39.62% gas vs singles
-
-###Logs-Query
+```
+### Logs-Query
+bash```
 [2] RoleGranted {
     role: '0x0000000000000000000000000000000000000000000000000000000000000000',
     account: '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
@@ -87,7 +92,7 @@ Batch saved ≈ -39.62% gas vs singles
     to: '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
     value: 1000000000000000000n
 }
-
+```
 ## MetMask
 
 ## Notes
