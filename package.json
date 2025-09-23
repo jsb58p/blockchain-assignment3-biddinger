@@ -1,7 +1,7 @@
 {
   "name": "didlab-activity3",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project showcases a Hardhat 3 Beta project using the native Node.js test runner (`node:test`) and the `viem` library for Ethereum interactions.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +22,16 @@
     "@openzeppelin/contracts": "^5.4.0",
     "dotenv": "^17.2.2"
   },
-  "type": "module"
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsb58p/blockchain-assignment3-biddinger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsb58p/blockchain-assignment3-biddinger/issues"
+  },
+  "homepage": "https://github.com/jsb58p/blockchain-assignment3-biddinger#readme"
 }
