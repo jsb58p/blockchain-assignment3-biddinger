@@ -140,7 +140,7 @@ Batch saved ≈ -39.62% gas vs singles
 ## c. Issues encountered
 - No deployment or runtime issues were encountered during testing.
 - The scripts (`deploy.ts`, `transfer-approve.ts`, `airdrop.ts`, `logs-query.ts`) executed successfully when correct environment variables were provided with the .env file.
-
+- The `transfer-approve.ts` script sent the transfer to the same address, making the balance after the transfer the same as before. In order to send to a recipient address, the RECIPIENT variable must be set with a valid address in the .env file.
 ---
 
 
