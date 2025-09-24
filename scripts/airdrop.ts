@@ -17,10 +17,9 @@ const account = privateKeyToAccount(`0x${PRIVATE_KEY}`);
 const wallet = createWalletClient({ account, chain, transport: http(RPC_URL) });
 const publicClient = createPublicClient({ chain, transport: http(RPC_URL) });
 // >>> Paste 3–6 recipient addresses for your team here (teammates + self ok)
-const recipients = [
-getAddress(account.address),
-"0x1468201632731Fd221Ae037CE13f9C7B49A365d6",
-// "0x.................",
+const recipients: readonly `0x${string}`[] = [
+  "0x1468201632731Fd221Ae037CE13f9C7B49A365d6",
+  // other addresses...
 ];
 const amounts = recipients.map(() => parseUnits("10", 18));
 // One batch airdrop

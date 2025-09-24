@@ -126,7 +126,7 @@ Batch saved ≈ -39.62% gas vs singles
 
 ## b. Why batch airdrop saved (or didn’t save) gas in your data
 
-- The airdrop.ts script uses `writeContract` in a loop to send tokens to multiple recipients, calling the `transfer()` function for each one. 
+- The airdrop.ts script uses `writeContract` in a loop to send tokens to multiple recipients, calling the `airdrop()` function in the CampusCreditV2 contract for each one. 
   It compares this to sending individual transfers, where the same tokens are sent one by one, incurring higher gas costs. 
   By batching the transfers in a single loop, the script saves gas by avoiding repeated transaction costs and signature checks.
 
