@@ -142,7 +142,7 @@ Batch saved ≈ -39.62% gas vs singles
 - The scripts (`deploy.ts`, `transfer-approve.ts`, `airdrop.ts`, `logs-query.ts`) executed successfully when correct environment variables were provided with the .env file.
 - The `transfer-approve.ts` and `airdrop`  scripts by default send the transfer to their own address, making the balance after the transfer the same as before. 
 - In order to send to a recipient address using `transfer-approve.ts`, the RECIPIENT variable must be set with a valid address in the .env file.
-- In order to send to a recipient address using`airdrop.ts`, the address must be set in the script as an argument to the **getAddress()** function.
+- In order to send to recipient address(es) using`airdrop.ts`, the address(es) must be set in the script in the **recipients** array.
 ---
 
 
