@@ -125,11 +125,10 @@ Batch saved ≈ -39.62% gas vs singles
   The `onlyRole` modifier ensures that only authorized accounts can call these functions.
 
 ## b. Why batch airdrop saved (or didn’t save) gas in your data
-- The `airdrop.ts` script calls the single‑transaction `airdrop()` function to mint to multiple recipients.  
-- It then performs the same distribution using individual `transfer()` calls and compares the gas usage.
-- Because `airdrop()` verifies the cap once and executes all mints in a single transaction,
-  it avoids repeated base transaction costs and signature checks.
-- The console output from `airdrop.ts` shows the total gas used by both approaches and prints the approximate percentage saved by the batch call.
+
+- The airdrop.ts script uses `writeContract` in a loop to send tokens to multiple recipients, calling the `transfer()` function for each one. 
+  It compares this to sending individual transfers, where the same tokens are sent one by one, incurring higher gas costs. 
+  By batching the transfers in a single loop, the script saves gas by avoiding repeated transaction costs and signature checks.
 
 <br>
 
