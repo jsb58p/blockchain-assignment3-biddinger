@@ -94,15 +94,58 @@ Batch saved ≈ -39.62% gas vs singles
     value: 1000000000000000000n
 }
 ```
-## MetMask
+## MetaMask Screenshots
 
-## Notes
+![network config](https://github.com/jsb58p/blockchain-assignment3-biddinger/blob/main/screenshots/8networkconfig.png)
 
-1. Where you enforced: cap, pause, roles.  
-2. Why batch airdrop saved (or didn’t save) gas in your data.  
-3. Any issues you hit and how you fixed them.
+![MetaMask Transaction](https://github.com/jsb58p/blockchain-assignment3-biddinger/blob/main/screenshots/6metamasktransaction.png)
+
+![MetaMask Balance](https://github.com/jsb58p/blockchain-assignment3-biddinger/blob/main/screenshots/9metamaskbalance.png)
+
+![MetaMask Balance 2](https://github.com/jsb58p/blockchain-assignment3-biddinger/blob/main/screenshots/9metamaskbalance2.png)
+
+![Transaction hash](https://github.com/jsb58p/blockchain-assignment3-biddinger/blob/main/screenshots/7txhash.png)
+
+# Project Short Write-up
+
+## a. Where you enforced: cap, pause, roles
+- **Cap enforcement:**  
+  In `CampusCreditV2.sol`, minting is capped using OpenZeppelin’s `ERC20Capped`.  
+  The `airdrop()` function calculates the total of all mint amounts and reverts with the
+  custom error `CapExceeded` if the new total supply would exceed the cap.
+- **Pause enforcement:**  
+  The contract inherits `ERC20Pausable`.  
+  Functions `pause()` and `unpause()` can only be called by accounts with the
+  `PAUSER_ROLE` to halt or resume all token transfers.
+- **Role enforcement:**  
+  Using `AccessControl`, the contract defines:
+  - `DEFAULT_ADMIN_ROLE` for role management,
+  - `MINTER_ROLE` required by `mint()` and `airdrop()`,
+  - `PAUSER_ROLE` required by `pause()`/`unpause()`.  
+  The `onlyRole` modifier ensures that only authorized accounts can call these functions.
+
+## b. Why batch airdrop saved (or didn’t save) gas in your data
+- The `airdrop.ts` script calls the single‑transaction `airdrop()` function to mint to multiple recipients.  
+- It then performs the same distribution using individual `transfer()` calls and compares the gas usage.
+- Because `airdrop()` verifies the cap once and executes all mints in a single transaction,
+  it avoids repeated base transaction costs and signature checks.
+- The console output from `airdrop.ts` shows the total gas used by both approaches and prints the approximate percentage saved by the batch call.
+
+<br>
+
+![airdrop.ts output](https://github.com/jsb58p/blockchain-assignment3-biddinger/blob/main/screenshots/3airdrop.ts.png)
+
+<br>
+
+## c. Issues encountered
+- No deployment or runtime issues were encountered during testing.
+- The scripts (`deploy.ts`, `transfer-approve.ts`, `airdrop.ts`, `logs-query.ts`) executed successfully when correct environment variables were provided with the .env file.
+
+---
 
 
+
+<br><br><br><br><br>
 
 
 # Sample Hardhat 3 Beta Project (`node:test` and `viem`)
